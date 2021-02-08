@@ -11,10 +11,10 @@ class Config():
     SUDO_USERS.append(939425014)
     SUDO_USERS = list(set(SUDO_USERS))
   else:
-    BOT_TOKEN = "1342512423:AAECV8WwvLxrNIAZgP2ANJ7fSUzY555ubUs"
+    BOT_TOKEN = "1612700614:AAFjGzZS3lhxxq9TJn4lDOneFCyulm5Msug"
     DATABASE_URL = "postgres://eronfbflvlwsjs:806fb979f966d7fb4ded82b9753f3dcac29491298c82b4a5a93ef47137c50956@ec2-52-1-95-247.compute-1.amazonaws.com:5432/deae3q32jltnkd"
-    APP_ID = "1425367"
-    API_HASH = "e8d6126a339ef13fca612c75d2c160f4"
+    APP_ID = "738109"
+    API_HASH = "c9a08d37e37d81f87e64c3db2183c3ec"
     SUDO_USERS = list(set(int(x) for x in ''.split()))
     SUDO_USERS.append(411872315)
     SUDO_USERS = list(set(SUDO_USERS))
