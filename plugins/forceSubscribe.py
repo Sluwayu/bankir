@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Iltimos  'channel' linkini bosib kanalimizga azo bolib 'UnMute Me' ni bosing.", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ Iltimos  'Omadlottouz' kanalimizga azo bolib 'UnMute Me' ni bosing.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -50,10 +50,10 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{},siz **podpiska qilmagansiz** mazkur [channel](https://t.me/{}) kanalga. Iltimos [AZO](https://t.me/{}) boling va **press the button below** guruxda yozish uchun.".format(message.from_user.mention, channel, channel),
+              "{}, iltimos **safimizga qoshilish uchun** mazkur [OMADLOTTOUZ](https://t.me/{}) kanalga azo bolmagansiz. Iltimos [AZO BOLISH](https://t.me/{})ni boling va **pasdagi knopkani bosing** guruxda yozish uchun.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
-                  [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
+                  [[InlineKeyboardButton("Azo boldim!", callback_data="onUnMuteRequest")]]
               )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
