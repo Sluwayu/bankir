@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Iltimos  'Omadlottouz' kanalimizga azo bolib 'UnMute Me' ni bosing.", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ Iltimos  'Omadlottouz' kanalimizga azo bolib 'AZO BOLDIM!' ni bosing.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -33,7 +33,7 @@ def _onUnMuteRequest(client, cb):
         client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
         client.leave_chat(chat_id)
       else:
-        client.answer_callback_query(cb.id, text="❗ Warning: Don't click the button if you can speak freely.", show_alert=True)
+        client.answer_callback_query(cb.id, text="❗ AZO BOLING VA UNDAN KEYIN BOSING !.", show_alert=True)
 
 
 
@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, iltimos **safimizga qoshilish uchun** mazkur [OMADLOTTOUZ](https://t.me/{}) kanalga azo bolmagansiz. Iltimos [AZO BOLISH](https://t.me/{})ni boling va **pasdagi knopkani bosing** guruxda yozish uchun.".format(message.from_user.mention, channel, channel),
+              "{}, iltimos **safimizga qoshilish uchun** mazkur [OMADLOTTOUZ](https://t.me/{}) kanalga azo bolganiz korinmayapti. Iltimos [AZO BOLISH](https://t.me/{})ni boling va **AZO BOLDIM!**knopkani bosing guruxda yozish uchun.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
                   [[InlineKeyboardButton("Azo boldim!", callback_data="onUnMuteRequest")]]
