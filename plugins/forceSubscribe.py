@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, iltimos **Ayrim sabablarga kora**[OMADLOTTOUZ](https://t.me/{})ga azo boling. Iltimos [AZO BOLISH](https://t.me/{})ni bosing va **AZO BOLDIM!** knopkani bosing guruxda yozish uchun!!".format(message.from_user.mention, channel, channel),
+              "{}, iltimos **jamlanish maqsadida **[OMADLOTTOUZ](https://t.me/{})ga azo boling hamda barcha fikrlarizni ochiq bayon eting .[OMADLOTTOUZ](https://t.me/{})ga azo bolgach **AZO BOLDIM!** knopkani bosing !!".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
                   [[InlineKeyboardButton("Azo boldim!", callback_data="onUnMuteRequest")]]
