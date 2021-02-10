@@ -33,7 +33,7 @@ def _onUnMuteRequest(client, cb):
         client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
         client.leave_chat(chat_id)
       else:
-        client.answer_callback_query(cb.id, text="❗ siz azo bolgansiz, sizga shart emas, uzimizdansiz !.", show_alert=True)
+        client.answer_callback_query(cb.id, text="❗ siz azo bolgansiz, sizga shart emas ❗", show_alert=True)
 
 
 
@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, iltimos **guruxda yozish uchun** avval [OMADLOTTOUZ](https://t.me/{}) kanalga azo boling . Keyin tekshirish uchun **AZO BOLDIM!** knopkani bosing !!".format(message.from_user.mention, channel, channel),
+              "{}, илтимос **натижаларни билиш учун** avval [OMADLOTTOUZ](https://t.me/{}) kanalga azo boling . [Шу ЁЗУВНИ устига босиб](https://t.me/{}) азо булинг ва **AZO BOLDIM!** knopkani bosing ❗".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
                   [[InlineKeyboardButton("AZO BOLDIM!", callback_data="onUnMuteRequest")]]
