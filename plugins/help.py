@@ -42,10 +42,10 @@ def map(pos):
             [InlineKeyboardButton(text = '-->', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = "https://www.youtube.com/c/OmadlottoUzb?sub_confirmation=1"
+        url = "https://t.me/bankirkundaligi"
         button = [
-            [InlineKeyboardButton(text = 'Gruppamiz', url="https://t.me/omadlottochat")],
-            [InlineKeyboardButton(text = 'BATAFSIL', url=url)],
+            [InlineKeyboardButton(text = 'Гурух', url="https://t.me/bankir_kundaligi")],
+            [InlineKeyboardButton(text = 'Батафсил', url=url)],
             [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
         ]
     else:
