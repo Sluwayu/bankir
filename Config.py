@@ -11,7 +11,7 @@ class Config():
     SUDO_USERS.append(939425014)
     SUDO_USERS = list(set(SUDO_USERS))
   else:
-    BOT_TOKEN = "1612700614:AAFjGzZS3lhxxq9TJn4lDOneFCyulm5Msug"
+    BOT_TOKEN = "1658914050:AAFFKFlpvH3Dzk-_Z9WJFQh07fUOBDoanVE"
     DATABASE_URL = "postgres://ysugfwmhvoayhj:9a4f7b8bb6fc9648679ef9d726eb80c0162d6abf393a65ded67646cbda671432@ec2-35-171-57-132.compute-1.amazonaws.com:5432/dc7pjust0gauhv"
     APP_ID = "738109"
     API_HASH = "c9a08d37e37d81f87e64c3db2183c3ec"
@@ -30,7 +30,7 @@ class Messages():
         
         "**Comm**\n__/Forcee - To get the current settings.\n/Foribe no/off/disable - To turn of ForceSubscribe.\n/Forib - To turn on and setup the channel.\n/Forbe  - To unmute all members who muted by me.\n\nNote: /cribe__",
         
-        "**@omadlottouz Adminidan**"
+        "**@bankirkundaligi Adminidan**"
       ]
 
       START_MSG = "**Hey [{}](tg://user?id={})**\n__I can force members to join a specific channel before writing messages in the group.\nLearn more at /help__"
