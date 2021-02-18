@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Iltimos  'Omadlottouz' kanalimizga azo bolib 'AZO BOLDIM!' ni bosing.", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ Iltimos,  'BankirKundaligi' kanalimizga azo bolib 'AZO BOLDIM!' ni bosing.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -50,7 +50,7 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, илтимос **натижаларни билиш учун** avval [OMADLOTTOUZ](https://t.me/{}) kanalga azo boling . [Шу ЁЗУВНИ устига босиб](https://t.me/{}) азо булинг ва **AZO BOLDIM!** knopkani bosing ❗".format(message.from_user.mention, channel, channel),
+              "{}, илтимос **гурухда ёзиш учун** аввал [BankirKundaligi](https://t.me/{}) каналимизга аъзо булинг! . [Шу ЁЗУВНИ устига босиб](https://t.me/{}) азо булинг ва **AZO BOLDIM!** knopkani bosing ❗".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
                   [[InlineKeyboardButton("AZO BOLDIM!", callback_data="onUnMuteRequest")]]
